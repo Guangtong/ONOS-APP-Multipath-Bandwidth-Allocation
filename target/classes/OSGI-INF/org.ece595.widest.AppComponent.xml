@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" immediate="true" name="org.ece595.widest.AppComponent" activate="activate" deactivate="deactivate">
+    <implementation class="org.ece595.widest.AppComponent"/>
+    <property name="service.pid" value="org.ece595.widest.AppComponent"/>
+    <reference name="hostService" interface="org.onosproject.net.host.HostService" cardinality="1..1" policy="static" bind="bindHostService" unbind="unbindHostService"/>
+    <reference name="topologyService" interface="org.onosproject.net.topology.TopologyService" cardinality="1..1" policy="static" bind="bindTopologyService" unbind="unbindTopologyService"/>
+    <reference name="packetService" interface="org.onosproject.net.packet.PacketService" cardinality="1..1" policy="static" bind="bindPacketService" unbind="unbindPacketService"/>
+    <reference name="coreService" interface="org.onosproject.core.CoreService" cardinality="1..1" policy="static" bind="bindCoreService" unbind="unbindCoreService"/>
+    <reference name="intentService" interface="org.onosproject.net.intent.IntentService" cardinality="1..1" policy="static" bind="bindIntentService" unbind="unbindIntentService"/>
+    <reference name="deviceService" interface="org.onosproject.net.device.DeviceService" cardinality="1..1" policy="static" bind="bindDeviceService" unbind="unbindDeviceService"/>
+    <reference name="groupService" interface="org.onosproject.net.group.GroupService" cardinality="1..1" policy="static" bind="bindGroupService" unbind="unbindGroupService"/>
+    <reference name="flowRuleService" interface="org.onosproject.net.flow.FlowRuleService" cardinality="1..1" policy="static" bind="bindFlowRuleService" unbind="unbindFlowRuleService"/>
+    <reference name="meterService" interface="org.onosproject.net.meter.MeterService" cardinality="1..1" policy="static" bind="bindMeterService" unbind="unbindMeterService"/>
+</scr:component>
